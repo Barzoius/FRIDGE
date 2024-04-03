@@ -1,0 +1,99 @@
+﻿@model FINAL_FRIDGE.Models.Bookmark
+
+
+@if (TempData["message"] != null)
+{
+    <div class="alert @ViewBag.Alert p-3 rounded-3 text-center mb-5">
+        @ViewBag.Message
+    </div>
+}
+
+<br />
+
+<div class="card mx-auto" style="max-width: 800px;">
+    <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs" style="display: flex; justify-content: space-between;">
+            <li class="nav-item">
+                <a class="user-link" href="@Url.Action("UserProfile", "Users", new { userId = Model.User.Id })">
+                    <i class="bi bi-person"></i> @Model.User.UserName
+                </a>
+            </li>
+
+
+            <li class="nav-item">
+                <a>
+                    @Model.Date
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="card-body">
+
+ 
+
+    @Html.Partial("BookmarkInfo", Model)
+
+    <div class="card-text">@Model.Content</div>
+
+
+    <div class="row">
+
+        <div class="col-12">
+                    
+        <br />           
+           
+        </div>
+
+        <div class="container text-center">
+            <h3 style="font-family: 'Rubik Doodle Shadow', cursive; position: relative; display: inline-block;">
+                Sectiunea de comentarii:
+                <span style="position: absolute; bottom: -5px; left: 50%; 
+                             transform: translateX(-50%); width: 120%; 
+                             border-bottom: 2px solid #8484ff;"></span>
+            </h3>
+        </div>
+
+
+        <br />
+        <br />
+
+        @foreach (var comm in Model.Comments)
+        {
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div style="margin: 10px 0; border: 2px solid #8484ff; border-radius: 10px; padding: 10px;">
+                            
+                            <!-- UserName-->
+
+                            <a class="user-link" href="@Url.Action("UserProfile", "Users", new { userId = comm.UserId })" style="padding: 5px; margin: 5px 0; display: inline-block;">
+                                <strong>
+                                    <i class="bi bi-person-square"></i>
+                                    @comm.User.UserName
+                                </strong>
+                            </a>
+
+                            <!-- Date  -->
+
+                            <small id="relativeDate" style="font-size: 1em; display: block; padding-bottom: 5px;">@comm.Date</small>
+
+                            <!-- Content -->
+                            <p>@comm.Content</p>
+
+                           
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+
+
+        }
+
+        </div>
+
+
+

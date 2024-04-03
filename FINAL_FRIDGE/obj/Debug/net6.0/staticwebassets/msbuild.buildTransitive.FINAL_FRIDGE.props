@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\FINAL_FRIDGE.props" />
+</Project>

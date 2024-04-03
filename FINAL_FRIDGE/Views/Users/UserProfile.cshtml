@@ -1,0 +1,236 @@
+﻿@model FINAL_FRIDGE.Models.ApplicationUser
+@using Microsoft.AspNetCore.Identity
+
+<style>
+
+
+    .user-link {
+        color: #555;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+        .user-link:hover {
+            color: #8484ff;
+        }
+</style>
+
+<br />
+
+<div style="text-align: center;">
+    <h2 style="font-family: 'Rubik Doodle Shadow', cursive;">@Model.UserName</h2>
+     
+</div>
+<br />
+
+ @if (Model.ProfilePicture != null)
+{
+    <div style="text-align: center;">
+
+        <img style="width:200px;height:200px; 
+                    object-fit:cover; 
+                    border-radius:30px; border: 5px solid purple;" 
+        src="data:image/*;base64,@(Convert.ToBase64String(Model.ProfilePicture))">
+
+    </div>
+}
+
+
+<br />
+
+<div class="d-flex justify-content-center flex-row mt-5">
+    <div class="mr-2" style="margin-right: 10px;">
+        <a class="btn" style="background-color: #3838b2; color: #ffffff;"
+           href="@Url.Action("Index", "Categories", new { userId = Model.Id })">
+            <i class="bi bi-tags"></i> Categorii
+        </a>
+    </div>
+
+    <div class="mr-2" style="margin-right: 10px;">
+        <a class="btn" style="background-color: #3838b2; color: #ffffff;"
+           href="@Url.Action("UserProfile", "Users", new { userId = Model.Id })">
+            <i class="bi bi-journal-bookmark-fill"></i> Bookmark-uri
+        </a>
+    </div>
+    
+
+    @if (ViewBag.UserCurent == Model.Id)
+    {
+        <div>
+            <a class="btn" style="background-color: #3838b2; color: #ffffff;" 
+            asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
+                <i class="bi bi-person-circle"></i> @User.Identity?.Name!
+            </a>
+
+            
+        </div>
+    }
+</div>
+
+
+
+<style>
+    .card-body {
+/*         border: 2px solid #8484ff; */
+        padding: 10px; 
+        margin: 10px 0; 
+    }
+
+    .card-body > div:not(:first-child):not(.card-title) {
+        border: 2px solid #8484ff;
+        padding: 5px;
+        margin: 5px 0;
+    }
+</style>
+
+<style>
+    .btn-outline-purple {
+        color: #6f42c1;
+        border-color: #6f42c1;
+    }
+
+        .btn-outline-purple:hover {
+            background-color: #6f42c1;
+            color: #fff;
+        }
+</style>
+
+<br />
+<br />
+
+<h3 style="text-align: center; font-family: 'Rubik Doodle Shadow', cursive;">Bookmarks:</h3>
+
+
+@foreach (var bookmark in ViewBag.Bookmarks)
+{
+
+    <div class="card text-center mx-auto" style="max-width: 600px;">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs" style="display: flex; justify-content: space-between;">
+                <li class="nav-item">
+                    <a class="user-link" href="@Url.Action("UserProfile", "Users", new { userId = bookmark.User.Id })">
+                        <i class="bi bi-person"></i> @bookmark.User.UserName
+                    </a>
+                </li>
+               
+
+                <li class="nav-item">
+                    <a>
+                        @bookmark.Date
+                    </a>
+                </li>
+               
+            </ul>
+        </div>
+        <div class="card-body" >
+
+        <h3 class="card-title py-3 px-3 rounded-2 text-center" style="background-color:#8484ff;; color: #ffffff;">@bookmark.Title</h3>
+
+
+
+        @if (!string.IsNullOrEmpty(bookmark.Image))
+        {
+            if (IsImage(bookmark.Image))
+            {
+                <div style="text-align: center;">
+                    <img src="@Url.Content(bookmark.Image)" alt="Bookmark Image" class="img-fluid" />
+                </div>
+            }
+            else if (IsVideo(bookmark.Image))
+            {
+                <div style="text-align: center;">
+                    <video width="500" controls style="display: inline-block;">
+                        <source src="@Url.Content(bookmark.Image)" type="video/mp4">
+
+                    </video>
+                </div>
+            }
+            else if (IsEmbeddedLink(bookmark.Image))
+            {
+                <div style="text-align: center;">
+                    <iframe width="500"
+                            controls style="display: inline-block"
+                            height="315"
+                            src="@Url.Content(bookmark.Image)"
+                            frameborder="0"
+                            allowfullscreen></iframe>
+
+                </div>
+            }
+        }
+
+            <div class="card-text">@bookmark.Content</div>       
+
+  
+
+        
+
+    </div>
+        <a class="btn" style="background-color: #3838b2; color: #ffffff;" href="/Bookmarks/Show/@bookmark.Id">Afisare Bookmark</a>
+    </div>
+
+    <br />
+    <br />
+    <br />
+}
+
+@functions {
+    private bool IsImage(string filePath)
+    {
+        var imageExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
+        var extension = System.IO.Path.GetExtension(filePath)?.ToLower();
+        return extension != null && imageExtensions.Contains(extension);
+    }
+
+    private bool IsVideo(string filePath)
+    {
+        var videoExtensions = new[] { ".mp4", ".avi", ".mkv", ".mov", ".wmv" };
+        var extension = System.IO.Path.GetExtension(filePath)?.ToLower();
+        return extension != null && videoExtensions.Contains(extension);
+    }
+
+    private bool IsEmbeddedLink(string link)
+    {
+        return link != null && link.ToLower().Contains("youtube.com");
+    }
+}
+
+
+
+
+<br />
+
+<style>
+    .centered-div {
+        margin: 0 auto;
+        width: fit-content;
+    }
+</style>
+
+@* Afisarea paginata *@
+<div class="centered-div">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link"
+                   href="@Url.Action("UserProfile", new { userId = Model.Id, page = 1 })" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            @for (int i = 1; i <= ViewBag.lastPage; i++)
+            {
+                <li class="page-item">
+                    <a class="page-link"
+                       href="@Url.Action("UserProfile", new { userId = Model.Id, page = i })">@(i)</a>
+                </li>
+            }
+            <li class="page-item">
+                <a class="page-link"
+                   href="@Url.Action("UserProfile", new { userId = Model.Id, page = ViewBag.lastPage })" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,123 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .header {
+        padding: 1em;
+        background: #8484ff;
+        margin-bottom: 1em;
+        padding-bottom: 3.5em;
+        text-align: center;
+        clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+    }
+
+
+        .header img {
+            max-width: 100%;
+            height: auto;
+            max-height: 100px; /* Adjust the max-height to your desired value */
+            margin-top: 10px;
+        }
+</style>
+
+<header class="header">
+    <h1 class="text-center" style="font-family: 'Rubik Doodle Shadow', cursive;">FRIDGE</h1>
+    <img src="/media/FRIDGE.png">
+</header>
+
+<br />
+
+@if (TempData["message"] != null)
+{
+    <div class="alert @ViewBag.Alert p-3 rounded-3 text-center mb-5">
+        @ViewBag.Message
+    </div>
+}
+
+<br />
+
+
+
+@foreach (FINAL_FRIDGE.Models.Bookmark bookmark in ViewBag.Bookmarks)
+{
+    <div class="card mx-auto" style="max-width: 600px;">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs" style="display: flex; justify-content: space-between;">
+                <li class="nav-item">
+                    <a class="user-link" href="@Url.Action("UserProfile", "Users", new { userId = bookmark.User.Id })">
+                        <i class="bi bi-person"></i> @bookmark.User.UserName
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a>
+                        @bookmark.Date
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="card-body">
+
+            @Html.Partial("BookmarkInfo", bookmark )
+
+            <div class="card-text">@bookmark.Content</div>
+
+        </div>
+
+        <!-- Like/Unlike -->
+        <p style="border: 2px solid purple; padding: 5px; margin: 10px auto; text-align: center; font-size: 14px;">
+            Likes: @(bookmark.TotalLikes != null ? bookmark.TotalLikes : 0)
+        </p>
+
+
+        <a class="btn" style="background-color: #3838b2; color: #ffffff;" href="/Home/Show/@bookmark.Id">Afisare Bookmark</a>
+    </div>
+    <br />
+    <br />
+}
+
+<style>
+    .centered-div {
+        margin: 0 auto;
+        width: fit-content;
+    }
+</style>
+
+
+@* Afisarea paginata a articolelor *@
+<div class="centered-div">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link"
+                   href="/Home/Index?page=1" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            @for (int i = 1; i <= ViewBag.lastPage; i++)
+            {
+                <li class="page-item">
+                    <a class="page-link"
+                       href="/Home/Index?page=@i">@(i)</a>
+                </li>
+            }
+            <li class="page-item">
+                <a class="page-link"
+                   href="/Home/Index?page=@(ViewBag.lastPage)" aria-
+                   label="Next">
+
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+

@@ -1,0 +1,270 @@
+﻿@model FINAL_FRIDGE.Models.Bookmark
+
+
+@if (TempData["message"] != null)
+{
+    <div class="alert @ViewBag.Alert p-3 rounded-3 text-center mb-5">
+        @ViewBag.Message
+    </div>
+}
+
+<br />
+
+<style>
+    .card-body > div:not(:first-child):not(.card-title) {
+        border: 2px solid #8484ff;
+        padding: 5px;
+        margin: 5px 0;
+    }
+
+    .user-link {
+        color: #555;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+        .user-link:hover {
+            color: #8484ff;
+        }
+
+</style>
+
+<style>
+
+    .btn-outline-purple {
+        color: #6f42c1;
+        border-color: #6f42c1;
+    }
+
+        .btn-outline-purple:hover {
+            background-color: #6f42c1;
+            color: #fff;
+        }
+
+    .btn-purple {
+        background-color: #8484ff;
+        color: #fff;
+    }
+
+        .btn-purple:hover {
+            color: #fff;
+        }
+
+</style>
+
+<div class="card mx-auto" style="max-width: 800px;">
+    <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs" style="display: flex; justify-content: space-between;">
+            <li class="nav-item">
+                <a class="user-link" href="@Url.Action("UserProfile", "Users", new { userId = Model.User.Id })">
+                    <i class="bi bi-person"></i> @Model.User.UserName
+                </a>
+            </li>
+
+
+            <li class="nav-item">
+                <a>
+                    @Model.Date
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <div class="card-body">
+
+        @Html.Partial("BookmarkInfo", Model)
+
+        <div class="card-text">@Model.Content</div>
+
+        @if (ViewBag.AfisareButoane == true && Model.UserId == ViewBag.UserCurent || ViewBag.EsteAdmin)
+        {
+            <div class="d-flex flex-row justify-content-between p-3 border-1 border-top">
+
+                <a class="btn btn-success" href="/Bookmarks/Edit/@Model.Id">Editeaza bookmark-ul</a>
+
+                @if (User.Identity.IsAuthenticated)
+                {
+
+                    var userLikes = ViewData["UserLikes"] as List<int?>;
+
+                    if (userLikes != null && userLikes.Contains(Model.Id))
+                    {
+                        <form asp-action="Unlike" asp-route-bookmarkId="@Model.Id" method="post">
+                            <button type="submit" class="btn btn-outline-purple mx-auto d-block">
+                                <i class="bi bi-hand-thumbs-up-fill"></i>
+                                @(Model.TotalLikes != null ? Model.TotalLikes : 0)
+                            </button>
+                        </form>
+                    }
+                    else
+                    {
+                        <form asp-action="Like" asp-route-bookmarkId="@Model.Id" method="post">
+                            <button type="submit" class="btn btn-outline-purple mx-auto d-block">
+                                <i class="bi bi-hand-thumbs-up"></i>
+                                @(Model.TotalLikes != null ? Model.TotalLikes : 0)
+                            </button>
+                        </form>
+                    }
+
+                }
+
+                <form method="post" action="/Bookmarks/Delete/@Model.Id">
+
+                    <button class="btn btn-danger" type="submit">Sterge Bookmark-ul</button>
+
+                </form>
+
+            </div>
+        }
+
+    </div>
+
+
+
+
+
+    <div class="row">
+
+        <div class="col-12">
+
+
+            <br />
+
+
+        </div>
+
+        <form method="post" asp-controller="Bookmarks" asp-action="AddCategory">
+            <input type="hidden" name="BookmarkId" value="@Model.Id" />
+            <div class="d-flex flex-row justify-content-center p-3 border-1 border-top">
+                <div style="margin-right: 10px;">
+                    <select name="CategoryId" class="form-control"
+                            style="border: 2px solid purple; padding: 5px;">
+                        <option selected>Adauga acest bookmark intr-o categorie</option>
+
+                        @foreach (var category in ViewBag.UserCategories)
+                        {
+                            <option value="@category.Id">@category.Name</option>
+                        }
+
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" class="btn btn-success alert-success" value="+"
+                           style="background-color: purple; color: white;" />
+                </div>
+            </div>
+        </form>
+
+
+        <div class="container text-center">
+            <h3 style="font-family: 'Rubik Doodle Shadow', cursive; position: relative; display: inline-block;">
+                Sectiunea de comentarii:
+                <span style="position: absolute; bottom: -5px; left: 50%;
+                             transform: translateX(-50%); width: 120%;
+                             border-bottom: 2px solid #8484ff;"></span>
+            </h3>
+        </div>
+
+
+        </br>
+        </br>
+        @foreach (var comm in Model.Comments)
+        {
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div style="margin: 10px 0; border: 2px solid #8484ff; border-radius: 10px; padding: 10px;">
+                            <!-- UserName-->
+                            <a class="user-link" href="@Url.Action("UserProfile", "Users", new { userId = comm.UserId })" style="padding: 5px; margin: 5px 0; display: inline-block;">
+                                <strong>
+                                    <i class="bi bi-person-square"></i>
+                                    @comm.User.UserName
+                                </strong>
+                            </a>
+
+                            <!-- Date  -->
+                            <small id="relativeDate" style="font-size: 0.8em; display: block; border-bottom: 1px solid rgba(211, 211, 211, 0.5); padding-bottom: 5px;">@comm.Date</small>
+
+                            <!-- Comment Content -->
+                            <p>@comm.Content</p>
+
+                            <!-- Edit/Delete -->
+                            @if (comm.UserId == ViewBag.UserCurent || ViewBag.EsteAdmin)
+                            {
+                                <div class="d-flex justify-content-start mt-3">
+                                    <a class="btn btn-outline-primary me-2" href="/Comments/Edit/@comm.Id"><i class="bi bi-pencil-square"></i> Editeaza</a>
+                                    <form method="post" action="/Comments/Delete/@comm.Id">
+                                        <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i> Sterge</button>
+                                    </form>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+
+
+        }
+
+
+
+        <style>
+            .centered-div {
+                margin: 0 auto;
+                width: fit-content;
+            }
+        </style>
+
+
+
+        @* Afisarea formularului in care se poate adauga un comentariu *@
+
+
+        <div class="container" style=" padding: 5px;">
+
+            <div class="row">
+
+                <div class="col-md-2"></div>
+
+                <div class="col-md-8">
+
+                    <div class="card" style="border: 2px solid purple; padding: 5px;">
+
+                        <form method="post" action="/Bookmarks/Show/@Model.Id">
+
+                            <div class="card-body">
+
+                                <input type="hidden" name="BookmarkId" value="@Model.Id" />
+
+                                <label><i class="bi bi-blockquote-left"></i> Continut comentariu:  </label>
+                                <br />
+
+                                <textarea class="form-control"
+                                          placeholder="Comentariul tau!"
+                                          style="border: 2px solid purple; padding: 5px;" name="Content"></textarea>
+
+                                @Html.ValidationMessage("Content", null, new { @class = "text-danger"})
+
+                                <br />
+
+
+                                <p style="text-align: center;">
+                                    <button class="btn btn-purple" type="submit">Adauga comentariul</button>
+                                </p>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-2"></div>
+
+            </div>
+
+        </div>

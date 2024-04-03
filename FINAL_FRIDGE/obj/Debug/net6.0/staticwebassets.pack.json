@@ -1,0 +1,405 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FINAL_FRIDGE.bundle.scp.css",
+      "PackagePath": "staticwebassets\\FINAL_FRIDGE.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\2740948.png",
+      "PackagePath": "staticwebassets\\images\\2740948.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\ER DIAG.png",
+      "PackagePath": "staticwebassets\\images\\ER DIAG.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Product Search Page - Opera 2023-12-29 12-47-02.mp4",
+      "PackagePath": "staticwebassets\\images\\Product Search Page - Opera 2023-12-29 12-47-02.mp4"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-06-30 012312.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-06-30 012312.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-07-02 034443.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-07-02 034443.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-08-05 001556.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-08-05 001556.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-08-05 213428.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-08-05 213428.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-08-28 051045.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-08-28 051045.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-09-08 000506.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-09-08 000506.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-09-12 004214.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-09-12 004214.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-09-16 093123.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-09-16 093123.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-09-16 093337.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-09-16 093337.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-09-16 093959.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-09-16 093959.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-09-17 085216.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-09-17 085216.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-09-23 080525.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-09-23 080525.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-09-25 091112.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-09-25 091112.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-10-01 075055.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-10-01 075055.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-10-07 081553.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-10-07 081553.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-10-08 095500.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-10-08 095500.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-11-22 190221.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-11-22 190221.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-11-25 182535.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-11-25 182535.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-12-17 162405.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-12-17 162405.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-12-25 131720.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-12-25 131720.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2023-12-29 111317.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2023-12-29 111317.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot 2024-01-12 125204.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2024-01-12 125204.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot_20221129_072428.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot_20221129_072428.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot_20221129_072520.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot_20221129_072520.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot_20230131_043126.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot_20230131_043126.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\Screenshot_20230227_020711.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot_20230227_020711.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\_I7Q7Lhha98rlqwEKKkmadG6cSBxGUm1pjfQJbL8f3g.png",
+      "PackagePath": "staticwebassets\\images\\_I7Q7Lhha98rlqwEKKkmadG6cSBxGUm1pjfQJbL8f3g.png"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\gg.hs",
+      "PackagePath": "staticwebassets\\images\\gg.hs"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\lab2.hs",
+      "PackagePath": "staticwebassets\\images\\lab2.hs"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\sem II tutorat 3 essays I for against essays final.doc",
+      "PackagePath": "staticwebassets\\images\\sem II tutorat 3 essays I for against essays final.doc"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\images\\watch[1]",
+      "PackagePath": "staticwebassets\\images"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\C_dev\\MDS\\FINAL_FRIDGE\\FINAL_FRIDGE\\wwwroot\\media\\FRIDGE.png",
+      "PackagePath": "staticwebassets\\media\\FRIDGE.png"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.FINAL_FRIDGE.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.FINAL_FRIDGE.props",
+      "PackagePath": "build\\FINAL_FRIDGE.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.FINAL_FRIDGE.props",
+      "PackagePath": "buildMultiTargeting\\FINAL_FRIDGE.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.FINAL_FRIDGE.props",
+      "PackagePath": "buildTransitive\\FINAL_FRIDGE.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

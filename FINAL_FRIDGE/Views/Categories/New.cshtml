@@ -1,0 +1,37 @@
+﻿@model FINAL_FRIDGE.Models.Category
+
+<br />
+
+<h2 class="mb-5 text-center"
+    style="font-family: 'Rubik Doodle Shadow', cursive;">
+    Adaugare Categorie
+</h2>
+
+<br />
+
+
+@using (Html.BeginForm(actionName: "New", controllerName: "Categories", method: FormMethod.Post))
+{
+
+    @Html.Label("Name", "Denumire colectie")
+    <br />
+
+    @Html.TextBox("Name", null, new { @class = "form-control" })
+
+    @Html.ValidationMessageFor(m => m.Name, null, new { @class = "text-danger" })
+
+    <br />
+
+    @Html.Label("Note", "Nota creatorului")
+    <br />
+
+    @Html.TextBox("Note", null, new { @class = "form-control" })
+
+    @Html.ValidationMessageFor(m => m.Note, null, new { @class = "text-danger" })
+    <br />
+    <br />
+
+    <button class="btn btn" style="background-color: #3838b2; color: #ffffff;" type="submit">Adauga categorie</button>
+
+}
+

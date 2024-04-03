@@ -1,0 +1,85 @@
+﻿@model FINAL_FRIDGE.Models.ApplicationUser
+
+
+@using (Html.BeginForm(actionName: "Edit", controllerName: "Users",
+       method: FormMethod.Post, routeValues: new { id = @Model.Id }))
+{
+    <div style="" >
+        <div class="row ">
+
+        <div class="col-3">
+            <div class="form-floating mb-3">
+                <div>
+                    <i class="bi bi-person"></i>
+                        @Html.Label("FirstName", "Nume utilizator", new { @class = "" })
+                </div>
+                
+                @Html.EditorFor(m => m.FirstName)
+            </div>
+        </div>
+
+        <div class="col-3">
+                <div class="form-floating mb-3">
+                    <div>
+                        <i class="bi bi-person"></i>
+                        @Html.Label("LastName", "Prenume utilizator", new { @class = "" })
+                    </div>
+                    @Html.EditorFor(m => m.LastName)
+                </div>
+        </div>
+
+    </div>
+
+ 
+    <div class="form-floating mb-3">
+        <div>
+            <i class="bi bi-person"></i>
+            @Html.Label("UserName", "UserName", new { @class = "" })
+        </div>
+ 
+            @Html.EditorFor(m => m.UserName)
+    </div>
+
+
+    <div class="form-floating mb-3">
+        <div>
+            <i class="bi bi-envelope"></i>
+            @Html.Label("Email", "Email utilizator", new { @class = "" })
+        </div>
+            
+            @Html.EditorFor(m => m.Email)
+    </div>
+
+    <div class="form-floating mb-3">
+        <div >
+            <div>
+                <i class="bi bi-phone"></i>
+                @Html.Label("PhoneNumber", "Numar telefon")
+           
+            </div>
+
+            @Html.EditorFor(m => m.PhoneNumber)
+        </div>
+
+
+    </div>
+   
+    <div class="form-floating mb-3" style="width:43%">
+        <div>
+            <i class="bi bi-card-list"></i>
+            <label>Selectati rolul</label>
+        </div>
+            @Html.DropDownList("newRole", new SelectList(Model.AllRoles, "Value", "Text", ViewBag.UserRole), null, new { @class = "form-control" })
+
+
+    </div>
+
+            <button class="btn btn-sm btn-success" type="submit">Editare user</button>
+    </div>
+   
+
+
+}
+
+
+

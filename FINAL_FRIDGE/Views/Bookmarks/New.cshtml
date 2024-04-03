@@ -1,0 +1,87 @@
+﻿@model FINAL_FRIDGE.Models.Bookmark
+
+<br />
+
+<h2 class="mb-5 text-center" style="font-family: 'Rubik Doodle Shadow', cursive;">Adaugare Bookmark</h2>
+
+
+<br />
+
+@{
+    // // Get the current URL
+    // var currentUrl = (string)ViewBag.URL;
+
+    // // Split the URL into segments
+    // var urlSegments = currentUrl.Split('/');
+
+    // // Get the last segment (which should be the last parameter)
+    // var lastParameter = urlSegments[urlSegments.Length - 1];
+}
+
+
+<div style="background-color: #fff; padding: 20px; width: 800px; margin: 0 auto; display: flex; align-items: center;">
+
+    <div style="flex: 1; text-align: center;">
+        <h2 style="font-family: 'Rubik Doodle Shadow', cursive; margin-bottom: 10px;">Formularul de adugare pentru bookmarkuri</h2>
+        
+    </div>
+
+    <div style="flex: 1; padding-left: 20px;">
+        @using (Html.BeginForm("New", "Bookmarks", FormMethod.Post, new { enctype = "multipart/form-data", style = "max-width: 500px;" }))
+        {
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+            <div style="border: 2px solid #3838b2; padding: 10px; margin-bottom: 10px; width: 400px;">
+                @Html.LabelFor(model => model.Title, "Titlu Bookmark")
+                <br />
+                @Html.TextBoxFor(model => model.Title, new { @class = "form-control", style = "border: 2px solid #3838b2; width: 100%;" })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+
+            <div style="border: 2px solid #3838b2; padding: 10px; margin-bottom: 10px; width: 400px;">
+                @Html.LabelFor(model => model.Content, "Continut Bookmarkului")
+                <br />
+                @Html.TextAreaFor(model => model.Content, new { @class = "form-control", style = "border: 2px solid #3838b2; width: 100%;" })
+                @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+            </div>
+
+           @*  @if (ViewBag.Url_Link == true)
+            {
+                <label>IMGS</label>
+                <a class="btn btn" href="/bookmarks/new/true">LOCAL</a>
+                <a class="btn btn" href="/bookmarks/new/false">EXTERN</a> 
+
+                <div style="border: 2px solid #3838b2; padding: 10px; margin-bottom: 10px; width: 400px;">
+                    <label for="BookmarkImage" style="color: #3838b2;">Select Image</label>
+                    <input type="file" name="BookmarkImage" id="BookmarkImage" class="form-control" style="border: 2px solid #3838b2; width: 100%;" />
+                </div>
+            }
+            else
+            {
+                <label>IMGS_###</label>
+                <a class="btn btn" href="/bookmarks/new/true">LOCAL</a>
+                <a class="btn btn" href="#">EXTERN</a>
+
+                <div style="border: 2px solid #3838b2; padding: 10px; margin-bottom: 10px; width: 400px;">
+                    <label for="EBD" style="color: #3838b2;">Or Enter Image URL</label>
+                    <input type="text" name="EBD" id="EBD" class="form-control" style="border: 2px solid #3838b2; width: 100%;" placeholder="Enter Image URL" />
+                </div>
+            } *@
+
+            <div style="border: 2px solid #3838b2; padding: 10px; margin-bottom: 10px; width: 400px;">
+                <label for="BookmarkImage" style="color: #3838b2;">Select Image</label>
+                <input type="file" name="BookmarkImage" id="BookmarkImage" class="form-control" style="border: 2px solid #3838b2; width: 100%;" />
+            </div>
+
+            <div style="border: 2px solid #3838b2; padding: 10px; margin-bottom: 10px; width: 400px;">
+                <label for="EBD" style="color: #3838b2;">Or Enter Image URL</label>
+                <input type="text" name="EBD" id="EBD" class="form-control" style="border: 2px solid #3838b2; width: 100%;" placeholder="Enter Image URL" />
+            </div>
+
+
+
+            <button class="btn" style="background-color: #3838b2; color: #ffffff; width: 100%;" type="submit">Adauga bookmark</button>
+        }
+    </div>
+</div>
+

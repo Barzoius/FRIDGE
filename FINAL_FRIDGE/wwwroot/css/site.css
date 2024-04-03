@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'FONT';
+    src: url('./fonts/your-font-file.woff2') format('woff2'), url('./fonts/your-font-file.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    margin-bottom: 60px;
+    /*background-color: #ffa962;*/
+    background-color:  #b5b5ff;
+   
+}
+
+
+
+.field-validation-valid {
+    display: none;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.navbar {
+    font-family: Roboto, sans-serif;
+    background-color: white !important;
+    border: none !important;
+    box-shadow: 0 3px 12px #636e72 !important;
+}
+
+a.nav-link {
+    color: #8484ff !important;
+}
+
+    a.nav-link:hover {
+        color: #3838b2 !important;
+    }
+
+.logoutbtn {
+    color: #2c2c2c !important;
+}
+
+    .logoutbtn:hover {
+        color: #3838b2 !important;
+    }

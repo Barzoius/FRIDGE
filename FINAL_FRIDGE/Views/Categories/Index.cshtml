@@ -1,0 +1,149 @@
+﻿@model FINAL_FRIDGE.Models.Category
+@using Microsoft.AspNetCore.Identity
+
+
+<br />
+
+
+@{
+    ViewBag.Title = "Index";
+}
+@{
+    var userCurent = ViewBag.UserCurent;
+    var currentUserId = ViewBag.CurrentUserId;
+
+    // <p>UserCurent: @userCurent</p>
+    // <p>CurrentUserId: @currentUserId</p>
+}
+
+
+<h3 style="text-align: center; font-family: 'Rubik Doodle Shadow', cursive;">@ViewBag.UserName</h3>
+<br />
+
+@if (ViewBag.UserProfilePicture != null)
+{
+    <div style="text-align: center;">
+
+        <img style="width:200px;height:200px;
+                    object-fit:cover;
+                    border-radius:30px; border: 5px solid purple;"
+             src="data:image/*;base64,@(Convert.ToBase64String(ViewBag.UserProfilePicture))">
+
+    </div>
+}
+
+
+
+<div class="d-flex justify-content-center flex-row mt-5">
+    <div class="mr-2" style="margin-right: 10px;">
+        <a class="btn" style="background-color: #3838b2; color: #ffffff;"
+           href="@Url.Action("Index", "Categories", new { userId = currentUserId })">
+            <i class="bi bi-tags"></i> Categorii
+        </a>
+    </div>
+
+    <div class="mr-2" style="margin-right: 10px;">
+        <a class="btn" style="background-color: #3838b2; color: #ffffff;"
+           href="@Url.Action("UserProfile", "Users", new { userId = currentUserId })">
+            <i class="bi bi-journal-bookmark-fill"></i> Bookmark-uri
+        </a>
+    </div>
+
+
+    @if (ViewBag.UserCurent == currentUserId)
+    {
+        <div>
+            <a class="btn" style="background-color: #3838b2; color: #ffffff;"
+               asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
+                <i class="bi bi-person-circle"></i> @User.Identity?.Name!
+            </a>
+
+        </div>
+    }
+</div>
+
+<br />
+<br />
+<br />
+
+
+<h3 style="text-align: center; font-family: 'Rubik Doodle Shadow', cursive;">Categorii</h3>
+
+<br />
+
+@if (TempData["message"] != null)
+{
+    <div class="alert @ViewBag.Alert p-3 rounded-3 text-center mb-5">
+        @ViewBag.Message
+    </div>
+}
+
+<br />
+
+@if (currentUserId != null && currentUserId == userCurent)
+{
+    <div class="d-flex justify-content-center align-items-center">
+        <a class="btn btn rounded-pill mb-5" style="background-color: #3838b2; color: #ffffff;" href="/Categories/New">
+            <i class="bi bi-plus" ></i> Adaugare categorie
+
+        </a>
+
+    </div>
+}
+
+
+
+
+<style>
+    .card {
+        border: 2px solid purple;
+        transition: background-color 0.3s;
+    }
+</style>
+
+<script>
+    
+    function getRandomIndex() {
+        return Math.floor(Math.random() * 3);
+    }
+
+    
+    function handleHover(element) {
+        const colors = ['#DCD0FF', '#D8BFD8', '#FFF0F5', '#674ea7']; 
+        const randomIndex = getRandomIndex();
+        element.style.backgroundColor = colors[randomIndex];
+    }
+
+    
+    function resetColor(element) {
+        element.style.backgroundColor = '';
+    }
+</script>
+
+<div class="row">
+    @foreach (var category in ViewBag.Categories)
+    {
+        <div class="col-4 mb-4">
+            <div class="card" onmouseover="handleHover(this)" onmouseout="resetColor(this)">
+
+                <div class="card-body">
+
+                    <h5 class="card-title" name="Name">@category.Name</h5>
+
+                    <div><i class="bi bi-person"> Creat de: </i> @category.User.UserName</div>
+
+                    <br />
+                    <div class="d-flex flex-row justify-content-between p-3 border-1 border-top">
+                        <a class="btn btn-sm" style="background-color: #3838b2; color: #ffffff;" href="/Categories/Show/@category.Id">Afisare Categorie</a>
+                        @if (currentUserId != null && currentUserId == userCurent || ViewBag.EsteAdmin)
+                        {
+                            <form method="post" action="/Categories/Delete/@category.Id">
+                                <button class="btn btn-danger" type="submit">Sterge Categoria</button>
+                            </form>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

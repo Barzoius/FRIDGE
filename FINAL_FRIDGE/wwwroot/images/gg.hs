@@ -1,0 +1,1 @@
+--haskell code for a list containg sum from 1 to 5

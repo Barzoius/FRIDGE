@@ -1,0 +1,172 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+
+<style>
+
+    .input-group .btn {
+        height: 38px;
+        width: 40px;
+        background-color: #3838b2;
+        color: #ffffff;
+    }
+</style>
+
+<h1 class="text-center" style="font-family: 'Rubik Doodle Shadow', cursive;"> Bookmark-uri</h1>
+
+
+<hr class="mb-4">
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-3">
+            <form method="get" action="/Bookmarks/Index" id="searchForm">
+               <div class="input-group ">
+                    <div class="form-outline" data-mdb-input-init>
+                    <input name="search" class="form-control" 
+                            type="text" placeholder="Cauta bookmarkuri..."
+                            value="@ViewBag.search">
+                    </div>
+
+                    <button type="submit" class="btn btn" data-mdb-ripple-init>
+                        <i class="bi bi-search"></i>
+                    </button>
+    
+               </div>
+
+    
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<br />
+
+@if (TempData["message"] != null)
+{
+    <div class="alert @ViewBag.Alert p-3 rounded-3 text-center mb-5">
+        @ViewBag.Message
+    </div>
+}
+
+<br />
+
+<style>
+    .btn-outline-purple {
+        color: #6f42c1; 
+        border-color: #6f42c1; 
+    }
+
+        .btn-outline-purple:hover {
+            background-color: #6f42c1; 
+            color: #fff; 
+        }
+</style>
+
+
+@foreach (FINAL_FRIDGE.Models.Bookmark bookmark in ViewBag.Bookmarks)
+{
+    <div class="card text-center mx-auto" style="max-width: 600px;">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs" style="display: flex; justify-content: space-between;">
+                <li class="nav-item">
+                    <a class="user-link" href="@Url.Action("UserProfile", "Users", new { userId = bookmark.User.Id })">
+                        <i class="bi bi-person"></i> @bookmark.User.UserName
+                    </a>
+                </li>
+               
+
+                <li class="nav-item">
+                    <a>
+                        @bookmark.Date
+                    </a>
+                </li>
+               
+            </ul>
+        </div>
+        <div class="card-body" >
+
+            @Html.Partial("BookmarkInfo", bookmark )
+
+            <div class="card-text">@bookmark.Content</div>
+
+            <!-- Like/Unlike -->
+            @if (User.Identity.IsAuthenticated)
+            {
+
+                var userLikes = ViewData["UserLikes"] as List<int?>;
+
+                if (userLikes != null && userLikes.Contains(bookmark.Id))
+                {
+                    <form asp-action="Unlike" asp-route-bookmarkId="@bookmark.Id" method="post">
+                        <button type="submit" class="btn btn-outline-purple mx-auto d-block">
+                            <i class="bi bi-hand-thumbs-up-fill"></i>
+                            @(bookmark.TotalLikes != null ? bookmark.TotalLikes : 0)
+                        </button>
+                    </form>
+                }
+                else
+                {
+                    <form asp-action="Like" asp-route-bookmarkId="@bookmark.Id" method="post">
+                        <button type="submit" class="btn btn-outline-purple mx-auto d-block">
+                            <i class="bi bi-hand-thumbs-up"></i>
+                            @(bookmark.TotalLikes != null ? bookmark.TotalLikes : 0)
+                        </button>
+                    </form>
+                }
+
+            }
+
+          
+
+           
+        </div>
+
+        <a class="btn" style="background-color: #3838b2; color: #ffffff;" href="/Bookmarks/Show/@bookmark.Id">Afisare Bookmark</a>
+    </div>
+    <br />
+    <br />
+}
+
+<style>
+    .centered-div {
+        margin: 0 auto;
+        width: fit-content;
+    }
+</style>
+
+
+@* Afisarea paginata a bookmark-urilor *@
+<div class="centered-div">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link"
+                   href="@ViewBag.PaginationBaseUrl=1" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            @for (int i = 1; i <= ViewBag.lastPage; i++)
+            {
+                <li class="page-item">
+                    <a class="page-link"
+                       href="@ViewBag.PaginationBaseUrl=@i">@(i)</a>
+                </li>
+            }
+            <li class="page-item">
+                <a class="page-link"
+                   href="@ViewBag.PaginationBaseUrl=@(ViewBag.lastPage)" aria-
+                   label="Next">
+
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+

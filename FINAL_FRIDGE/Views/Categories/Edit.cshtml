@@ -1,0 +1,21 @@
+﻿@model FINAL_FRIDGE.Models.Category
+
+<h2 class="text-center mt-5"
+	style="font-family: 'Rubik Doodle Shadow', cursive;">
+	Editare Categorie</h2>
+<br />
+
+
+<form method="post"
+	  action="/Categories/Edit/@Model.Id">
+	<label>Nume</label>
+	<br />
+	<input type="text" name="Name" value="@Model.Name" />
+	<br /><br />
+	<label>Note</label>
+	<br />
+	<input type="text" name="Note" value="@Model.Note" />
+	<br /><br />
+
+    <button class="btn" style="background-color: #3838b2; color: #ffffff; width: 100%;" type="submit">Modifica categoria</button>
+</form>
